@@ -1,5 +1,5 @@
 @echo off
-color 0A
+color f3
 title Core Prompt
 cd %core%
 cls
