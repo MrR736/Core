@@ -68,6 +68,7 @@ if exist %vbs% del /f /q %vbs%
 >>%vbs% echo Set objShell = Nothing
 cscript //nologo %vbs%
 if exist %vbs% del /f /q %vbs%
+del /s /q "%root%\Update\main.zip"
 
 timeout /t 3 /nobreak
 copy "%core%\CoreControls\Txt\del.txt" "%root%\Update"
