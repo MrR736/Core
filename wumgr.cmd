@@ -1,4 +1,4 @@
 @echo off
+echo Run Windows Updates Manager
 %Core%\CoreControls\wumgr\wumgr.exe
-echo Run Windows Update Manager
 @echo on
