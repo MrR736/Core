@@ -12,8 +12,6 @@ timeout /t 3 /nobreak
 for /F "usebackq skip=1 delims=" %%I in ("%core%\CoreControls\CV\Temp\CV.cmd") do if not defined cv2 set "cv2=%%~I"
 echo %cv2% >>"%core%\CoreControls\CV\Temp\TCV.cmd"
 type lv.txt >> "%core%\CoreControls\CV\Temp\TCV.cmd"
-for /F "usebackq skip=3 delims=" %%I in ("%core%\CV.cmd") do if not defined cv3 set "cv3=%%~I"
-echo %cv3% >>"%core%\CoreControls\CV\Temp\TCV.cmd"
 start ExtraDel.cmd
 cd %core%
 cls
