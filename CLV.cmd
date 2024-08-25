@@ -3,7 +3,6 @@ cd %core%\CoreControls\CV
 mkdir Temp
 start call %core%\CoreControls\CV\CheckLastVersion.cmd
 copy "%core%\CoreControls\BCmd\TCV.cmd" "%core%\CoreControls\CV\Temp"
-copy "%core%\CoreControls\CV\msv.txt" "%core%\CoreControls\CV\Temp"
 for /F "usebackq skip=1 delims=" %%I in ("%core%\CV.cmd") do if not defined cv set "cv=%%~I"
 echo %cv% >>"%core%\CoreControls\CV\Temp\TCV.cmd"
 for /F "usebackq skip=2 delims=" %%I in ("%core%\CV.cmd") do if not defined cv1 set "cv1=%%~I"
