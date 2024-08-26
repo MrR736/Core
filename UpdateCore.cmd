@@ -93,7 +93,6 @@ cscript //nologo %vbs%
 if exist %vbs% del /f /q %vbs%
 del /s /q "%root%\Update\main.zip"
 
-timeout /t 3 /nobreak
 copy "%core%\CoreControls\Txt\del.txt" "%root%\Update"
 cd %root%\Update
 type del.txt >> core.cmd
