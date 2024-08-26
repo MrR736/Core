@@ -8,4 +8,5 @@ start call %core%\CoreControls\CV\ExtraDel.cmd
 cd %core%
 cls
 echo Latest Versions
+echo:
 %core%\CoreControls\CV\Temp\CV.cmd
