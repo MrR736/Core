@@ -1,100 +1,27 @@
 @echo off
-cd "%root%"
-mkdir Update
-cd %root%\Update
-wget https://github.com/MrR736/CoreUpdates/archive/refs/heads/main.zip
-setlocal
 
-Call :UnZipFile "%root%\Update" "%root%\Update\main.zip"
+:UpdateCore
+if /i "%1"=="" (
+	echo /A   Update All Of Core
+	echo /CC  Only CoreControls
+	echo /CP  Only CorePrompt
+	echo /CSe Only CoreSettings
+	echo /SSo Only CoreSotfwares
+	echo /CU  Only CoreUpdates
+	exit /b
+) else if /i "%1"=="/a" (
+    cmd.exe /c start call %ProgramData%\PhoenixOS\Core\CoreCommands\UpdateCore\A.cmd
+) else if /i "%1"=="/cc" (
+    cmd.exe /c start call %ProgramData%\PhoenixOS\Core\CoreCommands\UpdateCore\CC.cmd
+) else if /i "%1"=="/cp" (
+    cmd.exe /c start call %ProgramData%\PhoenixOS\Core\CoreCommands\UpdateCore\CP.cmd
+) else if /i "%1"=="/cse" (
+    cmd.exe /c start call %ProgramData%\PhoenixOS\Core\CoreCommands\UpdateCore\CSe.cmd
+) else if /i "%1"=="/cso" (
+    cmd.exe /c start call %ProgramData%\PhoenixOS\Core\CoreCommands\UpdateCore\CSo.cmd
+) else if /i "%1"=="/cu" (
+    cmd.exe /c start call %ProgramData%\PhoenixOS\Core\CoreCommands\UpdateCore\CU.cmd
+) else (
+    echo Unknown option %1
+)
 exit /b
-
-:UnZipFile <ExtractTo> <newzipfile>
-set vbs="%temp%\_.vbs"
-if exist %vbs% del /f /q %vbs%
->%vbs%  echo Set fso = CreateObject("Scripting.FileSystemObject")
->>%vbs% echo If NOT fso.FolderExists(%1) Then
->>%vbs% echo fso.CreateFolder(%1)
->>%vbs% echo End If
->>%vbs% echo set objShell = CreateObject("Shell.Application")
->>%vbs% echo set FilesInZip=objShell.NameSpace(%2).items
->>%vbs% echo objShell.NameSpace(%1).CopyHere(FilesInZip)
->>%vbs% echo Set fso = Nothing
->>%vbs% echo Set objShell = Nothing
-cscript //nologo %vbs%
-if exist %vbs% del /f /q %vbs%
-
-del /s /q "%root%\Update\main.zip"
-cd %root%\Update
-wget https://github.com/MrR736/CoreSettings/archive/refs/heads/main.zip
-setlocal
-
-Call :UnZipFile "%root%\Update" "%root%\Update\main.zip"
-exit /b
-
-:UnZipFile <ExtractTo> <newzipfile>
-set vbs="%temp%\_.vbs"
-if exist %vbs% del /f /q %vbs%
->%vbs%  echo Set fso = CreateObject("Scripting.FileSystemObject")
->>%vbs% echo If NOT fso.FolderExists(%1) Then
->>%vbs% echo fso.CreateFolder(%1)
->>%vbs% echo End If
->>%vbs% echo set objShell = CreateObject("Shell.Application")
->>%vbs% echo set FilesInZip=objShell.NameSpace(%2).items
->>%vbs% echo objShell.NameSpace(%1).CopyHere(FilesInZip)
->>%vbs% echo Set fso = Nothing
->>%vbs% echo Set objShell = Nothing
-cscript //nologo %vbs%
-if exist %vbs% del /f /q %vbs%
-
-del /s /q "%root%\Update\main.zip"
-cd %root%\Update
-wget https://github.com/MrR736/CoreControls/archive/refs/heads/main.zip
-setlocal
-
-Call :UnZipFile "%root%\Update" "%root%\Update\main.zip"
-exit /b
-
-:UnZipFile <ExtractTo> <newzipfile>
-set vbs="%temp%\_.vbs"
-if exist %vbs% del /f /q %vbs%
->%vbs%  echo Set fso = CreateObject("Scripting.FileSystemObject")
->>%vbs% echo If NOT fso.FolderExists(%1) Then
->>%vbs% echo fso.CreateFolder(%1)
->>%vbs% echo End If
->>%vbs% echo set objShell = CreateObject("Shell.Application")
->>%vbs% echo set FilesInZip=objShell.NameSpace(%2).items
->>%vbs% echo objShell.NameSpace(%1).CopyHere(FilesInZip)
->>%vbs% echo Set fso = Nothing
->>%vbs% echo Set objShell = Nothing
-cscript //nologo %vbs%
-if exist %vbs% del /f /q %vbs%
-
-del /s /q "%root%\Update\main.zip"
-cd %root%\Update
-wget https://github.com/MrR736/Core/archive/refs/heads/main.zip
-setlocal
-
-Call :UnZipFile "%root%\Update" "%root%\Update\main.zip"
-exit /b
-
-:UnZipFile <ExtractTo> <newzipfile>
-set vbs="%temp%\_.vbs"
-if exist %vbs% del /f /q %vbs%
->%vbs%  echo Set fso = CreateObject("Scripting.FileSystemObject")
->>%vbs% echo If NOT fso.FolderExists(%1) Then
->>%vbs% echo fso.CreateFolder(%1)
->>%vbs% echo End If
->>%vbs% echo set objShell = CreateObject("Shell.Application")
->>%vbs% echo set FilesInZip=objShell.NameSpace(%2).items
->>%vbs% echo objShell.NameSpace(%1).CopyHere(FilesInZip)
->>%vbs% echo Set fso = Nothing
->>%vbs% echo Set objShell = Nothing
-cscript //nologo %vbs%
-if exist %vbs% del /f /q %vbs%
-del /s /q "%root%\Update\main.zip"
-
-copy "%core%\CoreControls\Txt\del.txt" "%root%\Update"
-cd %root%\Update
-type del.txt >> core.cmd
-start core.cmd
-exit

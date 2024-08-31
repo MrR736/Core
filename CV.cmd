@@ -5,4 +5,4 @@ echo Core Prompt
 echo Version %VERSION-CP%
 echo:
 
-%Core%\CoreControls\CV.cmd
+%Core%\CoreCommands\CV.cmd
