@@ -5,7 +5,7 @@ start call %core%\CoreControls\CV\CheckLastVersion.cmd
 cls
 timeout /t 3 /nobreak
 start call %core%\CoreControls\CV\ExtraDel.cmd
-cd %core%
+cd %core%\
 cls
 echo Latest Versions
 echo:
