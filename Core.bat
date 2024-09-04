@@ -1,5 +1,7 @@
 @echo off
 set VERSION-CP=0.0.0.0.3
+echo Core Version
+echo:
 :Core
 if /i "%1"=="" (
     echo /A   All
