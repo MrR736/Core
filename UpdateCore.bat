@@ -12,7 +12,7 @@ if /i "%1"=="" (
 	exit /b
 ) else if /i "%1"=="/a" (
         start call "%ProgramData%\PhoenixOS\Core\CoreCommands\UpdateCore\A.cmd"
-	exit /b
+	exit
 ) else if /i "%1"=="/cc" (
         start call "%ProgramData%\PhoenixOS\Core\CoreCommands\UpdateCore\CC.cmd"
 	exit /b
@@ -21,7 +21,7 @@ if /i "%1"=="" (
 	exit /b
 ) else if /i "%1"=="/cp" (
         start call "%ProgramData%\PhoenixOS\Core\CoreCommands\UpdateCore\CP.cmd"
-	exit /b
+	exit
 ) else if /i "%1"=="/cse" (
     start call "%ProgramData%\PhoenixOS\Core\CoreCommands\UpdateCore\CSe.cmd"
 	exit /b
