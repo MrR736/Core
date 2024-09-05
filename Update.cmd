@@ -1,5 +1,5 @@
 @echo off
-Start call "%Core%\CoreUpdates\Update.cmd"
-Start call "%Core%\CoreControls\LoadingBar\LB.cmd"
+Start call "%ProgramData%\PhoenixOS\Core\CoreUpdates\Update.cmd"
+Start call "%ProgramData%\PhoenixOS\Core\CoreControls\LoadingBar\LB.cmd"
 cls
 @echo on
