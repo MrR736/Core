@@ -1,5 +1,5 @@
 @echo off
-set VERSION-CP=0.0.0.0.3
+set VERSION-CP=0.0.0.0.4
 echo Core Version
 echo:
 :Core
