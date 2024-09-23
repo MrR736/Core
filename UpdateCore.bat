@@ -11,26 +11,26 @@ if /i "%1"=="" (
 	echo /CU  Only CoreUpdates
 	exit /b
 ) else if /i "%1"=="/a" (
-        start call "%ProgramData%\PhoenixOS\Core\CoreCommands\UpdateCore\A.cmd"
-	exit
+        start call "%cd%\CoreCommands\UpdateCore\A.cmd"
+        exit
 ) else if /i "%1"=="/cc" (
-        start call "%ProgramData%\PhoenixOS\Core\CoreCommands\UpdateCore\CC.cmd"
-	exit /b
+        start call "%cd%\CoreCommands\UpdateCore\CC.cmd"
+        exit /b
 ) else if /i "%1"=="/cco" (
-        start call "%ProgramData%\PhoenixOS\Core\CoreControls\CCo\CCo.cmd"
-	exit /b
+        start call "%cd%\CoreControls\CCo\CCo.cmd"
+        exit /b
 ) else if /i "%1"=="/cp" (
-        start call "%ProgramData%\PhoenixOS\Core\CoreCommands\UpdateCore\CP.cmd"
-	exit
+        start call "%cd%\CoreCommands\UpdateCore\CP.cmd"
+        exit
 ) else if /i "%1"=="/cse" (
-    start call "%ProgramData%\PhoenixOS\Core\CoreCommands\UpdateCore\CSe.cmd"
-	exit /b
+        start call "%cd%\CoreCommands\UpdateCore\CSe.cmd"
+        exit /b
 ) else if /i "%1"=="/cso" (
-        start call "%ProgramData%\PhoenixOS\Core\CoreCommands\UpdateCore\CSo.cmd"
-	exit /b
+        start call "%cd%\CoreCommands\UpdateCore\CSo.cmd"
+        exit /b
 ) else if /i "%1"=="/cu" (
-        start call "%ProgramData%\PhoenixOS\Core\CoreCommands\UpdateCore\CU.cmd"
-	exit /b
+        start call "%cd%\CoreCommands\UpdateCore\CU.cmd"
+        exit /b
 ) else (
     echo Unknown option %1
 )
