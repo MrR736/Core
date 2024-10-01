@@ -1,5 +1,5 @@
 @echo off
+set "cp=%ProgramData%\PhoenixOS\Core"
 echo Core Latest Versions
 echo:
-call %ProgramData%\PhoenixOS\Core\CoreControls\CV\CheckLastVersion.cmd
-cd %ProgramData%\PhoenixOS\Core
+call "%cp%\CoreControls\CV\CheckLastVersion.cmd"

@@ -1,4 +1,5 @@
 @echo off
-cd /d %~dp0
-Start /w call "%cd%\CoreUpdates\Update.cmd"
+set "cp=%ProgramData%\PhoenixOS\Core"
+
+Start /w call "%cp%\CoreUpdates\Update.cmd"
 exit

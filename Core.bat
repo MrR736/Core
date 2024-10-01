@@ -1,4 +1,5 @@
 @echo off
+set "cp=%ProgramData%\PhoenixOS\Core"
 set VERSION-CP=0.0.0.0.4
 echo Core Version
 echo:
@@ -16,30 +17,30 @@ if /i "%1"=="" (
     echo Core Prompt
     echo Version %VERSION-CP%
     echo:
-    call %ProgramData%\PhoenixOS\Core\CoreCommands\CV.cmd
-    call %ProgramData%\PhoenixOS\Core\CoreControls\CV.cmd
-    call %ProgramData%\PhoenixOS\Core\CoreSettings\CV.cmd
-    call %ProgramData%\PhoenixOS\Core\CoreSotfwares\CV.cmd
-    call %ProgramData%\PhoenixOS\Core\CoreUpdates\CV.cmd
+    call "%cp%\CoreCommands\CV.cmd"
+    call "%cp%\CoreControls\CV.cmd"
+    call "%cp%\CoreSettings\CV.cmd"
+    call "%cp%\CoreSotfwares\CV.cmd"
+    call "%cp%\CoreUpdates\CV.cmd"
 	exit /b
 ) else if /i "%1"=="/CP" (
 	echo Core Prompt
 	echo Version %VERSION-CP%
     exit /b
 ) else if /i "%1"=="/CCO" (
-    call %ProgramData%\PhoenixOS\Core\CoreCommands\CV.cmd
+    call "%cp%\CoreCommands\CV.cmd"
     exit /b
 ) else if /i "%1"=="/CC" (
-    call %ProgramData%\PhoenixOS\Core\CoreControls\CV.cmd
+    call "%cp%\CoreControls\CV.cmd"
     exit /b
 ) else if /i "%1"=="/CSe" (
-    call %ProgramData%\PhoenixOS\Core\CoreSettings\CV.cmd
+    call "%cp%\CoreSettings\CV.cmd"
     exit /b
 ) else if /i "%1"=="/CSo" (
-    call %ProgramData%\PhoenixOS\Core\CoreSotfwares\CV.cmd
+    call "%cp%\CoreSotfwares\CV.cmd"
     exit /b
 ) else if /i "%1"=="/CU" (
-    call %ProgramData%\PhoenixOS\Core\CoreUpdates\CV.cmd
+    call "%cp%\CoreUpdates\CV.cmd"
     exit /b
 ) else (
     echo Unknown option %1

@@ -1,5 +1,5 @@
 @echo off
-cd /d %~dp0
+set "cp=%ProgramData%\PhoenixOS\Core"
 
 :UpdateCore
 if /i "%1"=="" (
@@ -12,25 +12,25 @@ if /i "%1"=="" (
 	echo /CU  Only CoreUpdates
 	exit /b
 ) else if /i "%1"=="/a" (
-        start call "%cd%\CoreCommands\UpdateCore\A.cmd"
+        start call "%cp%\CoreCommands\UpdateCore\A.cmd"
         exit
 ) else if /i "%1"=="/cc" (
-        start call "%cd%\CoreCommands\UpdateCore\CC.cmd"
+        start call "%cp%\CoreCommands\UpdateCore\CC.cmd"
         exit /b
 ) else if /i "%1"=="/cco" (
-        start call "%cd%\CoreControls\CCo\CCo.cmd"
+        start call "%cp%\CoreControls\CCo\CCo.cmd"
         exit /b
 ) else if /i "%1"=="/cp" (
-        start call "%cd%\CoreCommands\UpdateCore\CP.cmd"
+        start call "%cp%\CoreCommands\UpdateCore\CP.cmd"
         exit
 ) else if /i "%1"=="/cse" (
-        start call "%cd%\CoreCommands\UpdateCore\CSe.cmd"
+        start call "%cp%\CoreCommands\UpdateCore\CSe.cmd"
         exit /b
 ) else if /i "%1"=="/cso" (
-        start call "%cd%\CoreCommands\UpdateCore\CSo.cmd"
+        start call "%cp%\CoreCommands\UpdateCore\CSo.cmd"
         exit /b
 ) else if /i "%1"=="/cu" (
-        start call "%cd%\CoreCommands\UpdateCore\CU.cmd"
+        start call "%cp%\CoreCommands\UpdateCore\CU.cmd"
         exit /b
 ) else (
     echo Unknown option %1
