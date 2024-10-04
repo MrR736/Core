@@ -8,7 +8,7 @@ if /i "%1"=="" (
     echo /A   All
     echo /CC  CoreControls
     echo /CCO CoreCommands
-    echo /CP  CorePrompt
+    echo /CP  CorePanel
     echo /CSe CoreSettings
     echo /CSo CoreSoftwares
     echo /CU  CoreUpdates
