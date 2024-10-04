@@ -18,9 +18,13 @@ if /i "%1"=="" (
     echo Version %VERSION-CP%
     echo:
     call "%cp%\CoreCommands\CV.cmd"
+    echo:
     call "%cp%\CoreControls\CV.cmd"
+    echo:
     call "%cp%\CoreSettings\CV.cmd"
+    echo:
     call "%cp%\CoreSoftwares\CV.cmd"
+    echo:
     call "%cp%\CoreUpdates\CV.cmd"
     exit /b
 ) else if /i "%1"=="/CP" (
