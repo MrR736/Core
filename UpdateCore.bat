@@ -8,7 +8,7 @@ if /i "%1"=="" (
         echo /CCo Only CoreCommands
 	echo /CP  Only CorePrompt
 	echo /CSe Only CoreSettings
-	echo /SSo Only CoreSotfwares
+	echo /SSo Only CoreSoftwares
 	echo /CU  Only CoreUpdates
 	exit /b
 ) else if /i "%1"=="/a" (

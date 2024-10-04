@@ -10,7 +10,7 @@ if /i "%1"=="" (
 	echo /CCO CoreCommands
 	echo /CP  CorePrompt
 	echo /CSe CoreSettings
-	echo /CSo CoreSotfwares
+	echo /CSo CoreSoftwares
 	echo /CU  CoreUpdates
 	exit /b
 ) else if /i "%1"=="/a" (
@@ -20,7 +20,7 @@ if /i "%1"=="" (
     call "%cp%\CoreCommands\CV.cmd"
     call "%cp%\CoreControls\CV.cmd"
     call "%cp%\CoreSettings\CV.cmd"
-    call "%cp%\CoreSotfwares\CV.cmd"
+    call "%cp%\CoreSoftwares\CV.cmd"
     call "%cp%\CoreUpdates\CV.cmd"
 	exit /b
 ) else if /i "%1"=="/CP" (
@@ -37,7 +37,7 @@ if /i "%1"=="" (
     call "%cp%\CoreSettings\CV.cmd"
     exit /b
 ) else if /i "%1"=="/CSo" (
-    call "%cp%\CoreSotfwares\CV.cmd"
+    call "%cp%\CoreSoftwares\CV.cmd"
     exit /b
 ) else if /i "%1"=="/CU" (
     call "%cp%\CoreUpdates\CV.cmd"

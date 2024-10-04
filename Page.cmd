@@ -3,8 +3,8 @@
 :Page
 if /i "%1"=="" (
     echo /M   Main Page
-	echo /D   Download Page
-	exit /b
+    echo /D   Download Page
+    exit /b
 ) else if /i "%1"=="/m" (
     echo https://github.com/MrR736
     exit /b

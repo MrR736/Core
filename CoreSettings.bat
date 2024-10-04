@@ -24,7 +24,7 @@ if /i "%1"=="" (
 	echo /CMC   Add CabMaker To Context Menu
 	echo  -E     Enable
 	echo  -D     Disable
-	echo /CSS   Add CoreSotfwares To Start Menu
+	echo /CSS   Add CoreSoftwares To Start Menu
 	echo  -E     Enable
 	echo  -D     Disable
 	exit /b
@@ -92,13 +92,13 @@ if /i "%1"=="" (
         start cmd /c call "%cp%\CoreSettings\CabMaker-Disable.cmd"
         exit /b
 ) else if /i "%1"=="/CSS" (
-        echo Add CoreSotfwares To Start Menu
+        echo Add CoreSoftwares To Start Menu
         exit /b
 ) else if /i "%1"=="/CSS-E" (
-        start cmd /c call "%cp%\CoreSettings\CoreSotfwares-To-Start-Menu-Enable.cmd"
+        start cmd /c call "%cp%\CoreSettings\CoreSoftwares-To-Start-Menu-Enable.cmd"
         exit /b
 ) else if /i "%1"=="/CSS-D" (
-        start cmd /c call "%cp%\CoreSettings\CoreSotfwares-To-Start-Menu-Disable.cmd"
+        start cmd /c call "%cp%\CoreSettings\CoreSoftwares-To-Start-Menu-Disable.cmd"
         exit /b
 ) else (
     echo Unknown option %1
