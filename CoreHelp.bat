@@ -8,7 +8,7 @@ if /i "%1"=="" (
 	echo  CoreSettings    CoreSettings Enable or Disable Settings in Core
 	echo  Page            Show GitHub Page And Downloads Page
 	echo  Update          Update Software from Internet
-	echo  UpdateCore      Update Core from Internet
+	echo  UpdateCore      Update Core from Internet But It Is a Dev Tool
 ) else if /i "%1"=="Core" (
 	echo 2
 	exit /b
