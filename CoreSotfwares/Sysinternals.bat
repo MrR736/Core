@@ -20,7 +20,6 @@ endlocal
 :64bit
 wget -q -O"%cd%\Sysinternals\Autologon.exe" https://live.sysinternals.com/Autologon64.exe
 wget -q -O"%cd%\Sysinternals\Autoruns.exe" https://live.sysinternals.com/Autoruns64.exe
-wget -q -O"%cd%\Sysinternals\Cacheset.exe" https://live.sysinternals.com/Cacheset64.exe
 wget -q -O"%cd%\Sysinternals\CPUSTRES.EXE" https://live.sysinternals.com/CPUSTRES64.EXE
 wget -q -O"%cd%\Sysinternals\dbgview.exe" https://live.sysinternals.com/dbgview64.exe
 wget -q -O"%cd%\Sysinternals\disk2vhd.exe" https://live.sysinternals.com/disk2vhd64.exe
@@ -30,12 +29,11 @@ wget -q -O"%cd%\Sysinternals\RAMMap.exe" https://live.sysinternals.com/RAMMap64.
 wget -q -O"%cd%\Sysinternals\tcpview.exe" https://live.sysinternals.com/tcpview64.exe
 wget -q -O"%cd%\Sysinternals\vmmap.exe" https://live.sysinternals.com/vmmap64.exe
 wget -q -O"%cd%\Sysinternals\Winobj.exe" https://live.sysinternals.com/Winobj64.exe
-exit /b
+goto :32-64bit
 
 :32bit
 wget -q -O"%cd%\Sysinternals\Autologon.exe" https://live.sysinternals.com/Autologon.exe
 wget -q -O"%cd%\Sysinternals\Autoruns.exe" https://live.sysinternals.com/Autoruns.exe
-wget -q -O"%cd%\Sysinternals\Cacheset.exe" https://live.sysinternals.com/Cacheset.exe
 wget -q -O"%cd%\Sysinternals\CPUSTRES.EXE" https://live.sysinternals.com/CPUSTRES.EXE
 wget -q -O"%cd%\Sysinternals\dbgview.exe" https://live.sysinternals.com/Dbgview.exe
 wget -q -O"%cd%\Sysinternals\disk2vhd.exe" https://live.sysinternals.com/disk2vhd.exe
@@ -45,4 +43,8 @@ wget -q -O"%cd%\Sysinternals\RAMMap.exe" https://live.sysinternals.com/RAMMap.ex
 wget -q -O"%cd%\Sysinternals\tcpview.exe" https://live.sysinternals.com/tcpview.exe
 wget -q -O"%cd%\Sysinternals\vmmap.exe" https://live.sysinternals.com/vmmap.exe
 wget -q -O"%cd%\Sysinternals\Winobj.exe" https://live.sysinternals.com/Winobj.exe
+goto :32-64bit
+
+:32-64bit
+wget -q -O"%cd%\Sysinternals\Cacheset.exe" https://live.sysinternals.com/Cacheset.exe
 exit /b

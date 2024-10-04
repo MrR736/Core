@@ -16,28 +16,7 @@ del /q ".\url"
 .\7z x "%temp%\BRU.zip" -O"%temp%\BRU" -y
 del /q "%temp%\BRU.zip"
 cls
-setlocal
-
-:: Check if the system is 64-bit
-if "%PROCESSOR_ARCHITECTURE%"=="AMD64" (
-    echo Running 64-bit command
-    :: Replace with your 64-bit command
-    goto :64bit
-) else (
-    echo Running 32-bit command
-    :: Replace with your 32-bit command
-    goto :32bit
-)
-
-endlocal
-
-:32bit
 move "%Temp%\BRU\32-bit\*.exe" "%cd%"
 rd /s /q "%temp%\BRU"
-exit
-
-:64bit
-move "%Temp%\BRU\64-bit\*.exe" "%cd%"
-rd /s /q "%temp%\BRU"
-exit
+exit /b
 

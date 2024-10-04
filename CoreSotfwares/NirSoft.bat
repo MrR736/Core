@@ -82,4 +82,4 @@ goto :32-64bit
 del /q "%cd%\NirSoft\*.chm"
 del /q "%cd%\NirSoft\*.txt"
 rd /s /q "%temp%\NirSoft"
-exit
+exit /b

@@ -1,5 +1,5 @@
 @echo off
-set VERSION-CSo=0.0.0.0.3
+set VERSION-CSo=0.0.0.0.4
 
-echo CoreSotfwares
+echo CoreSoftwares
 echo Version %VERSION-CSo%
