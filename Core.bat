@@ -7,14 +7,14 @@ echo:
 if /i "%1"=="" (
     echo /A   All
     echo /CC  CoreControls
-	echo /CCO CoreCommands
-	echo /CP  CorePrompt
-	echo /CSe CoreSettings
-	echo /CSo CoreSoftwares
-	echo /CU  CoreUpdates
-	exit /b
+    echo /CCO CoreCommands
+    echo /CP  CorePrompt
+    echo /CSe CoreSettings
+    echo /CSo CoreSoftwares
+    echo /CU  CoreUpdates
+    exit /b
 ) else if /i "%1"=="/a" (
-    echo Core Prompt
+    echo Core Panel
     echo Version %VERSION-CP%
     echo:
     call "%cp%\CoreCommands\CV.cmd"
@@ -22,10 +22,10 @@ if /i "%1"=="" (
     call "%cp%\CoreSettings\CV.cmd"
     call "%cp%\CoreSoftwares\CV.cmd"
     call "%cp%\CoreUpdates\CV.cmd"
-	exit /b
+    exit /b
 ) else if /i "%1"=="/CP" (
-	echo Core Prompt
-	echo Version %VERSION-CP%
+    echo Core Panel
+    echo Version %VERSION-CP%
     exit /b
 ) else if /i "%1"=="/CCO" (
     call "%cp%\CoreCommands\CV.cmd"
