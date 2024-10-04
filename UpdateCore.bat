@@ -3,7 +3,7 @@ set "cp=%ProgramData%\PhoenixOS\Core"
 
 :UpdateCore
 if /i "%1"=="" (
-	echo Warning UpdateCore Is Updates To Stable or Unstable Versions Of Core
+	echo Warning UpdateCore Is Update To Stable or Unstable Versions Of Core
 	echo:
 	echo /A   Update All Of Core
 	echo /CC  Only CoreControls
