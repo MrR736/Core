@@ -6,7 +6,7 @@ if /i "%1"=="" (
 	echo /A   Update All Of Core
 	echo /CC  Only CoreControls
         echo /CCo Only CoreCommands
-	echo /CP  Only CorePrompt
+	echo /CP  Only CorePanel
 	echo /CSe Only CoreSettings
 	echo /SSo Only CoreSoftwares
 	echo /CU  Only CoreUpdates
