@@ -14,7 +14,7 @@ if /i "%1"=="" (
     echo /CU  CoreUpdates
     exit /b
 ) else if /i "%1"=="/a" (
-    echo Core Panel
+    echo CorePanel
     echo Version %VERSION-CP%
     echo:
     call "%cp%\CoreCommands\CV.cmd"
@@ -24,7 +24,7 @@ if /i "%1"=="" (
     call "%cp%\CoreUpdates\CV.cmd"
     exit /b
 ) else if /i "%1"=="/CP" (
-    echo Core Panel
+    echo CorePanel
     echo Version %VERSION-CP%
     exit /b
 ) else if /i "%1"=="/CCO" (
