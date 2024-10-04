@@ -7,11 +7,12 @@ if /i "%1"=="" (
 	echo:
 	echo /A   Update All Of Core
 	echo /CC  Only CoreControls
-        echo /CCo Only CoreCommands
+	echo /CCo Only CoreCommands
 	echo /CP  Only CorePrompt
 	echo /CSe Only CoreSettings
 	echo /SSo Only CoreSoftwares
 	echo /CU  Only CoreUpdates
+	echo /P   Update From Core Packages Only Stable Updates
 	exit /b
 ) else if /i "%1"=="/a" (
         start call "%cp%\CoreCommands\UpdateCore\A.cmd"
@@ -33,6 +34,9 @@ if /i "%1"=="" (
         exit /b
 ) else if /i "%1"=="/cu" (
         start call "%cp%\CoreCommands\UpdateCore\CU.cmd"
+        exit /b
+) else if /i "%1"=="/p" (
+        start call "%cp%\CoreCommands\UpdateCore\p.cmd"
         exit /b
 ) else (
     echo Unknown option %1
